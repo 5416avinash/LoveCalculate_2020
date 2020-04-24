@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">True Love Calculate</string>
+
+    <string name="calculatelove">CALCULATE YOUR LOVE</string>
+    <string name="yourlovematch">YOUR LOVE MATCH</string>
+    <string name="try_again"><u>TRY AGAIN</u></string>
+
+
+   <!-- <string name="Admob_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="banner_ads">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="full_screen_ads">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="video_ads">ca-app-pub-3940256099942544/5224354917</string>-->
+
+    <string name="Admob_id">ca-app-pub-4868790053009451~4637266041</string>
+    <string name="banner_ads">ca-app-pub-4868790053009451/5567204333</string>
+    <string name="full_screen_ads">ca-app-pub-4868790053009451/5319151699</string>
+
+
+
+</resources>

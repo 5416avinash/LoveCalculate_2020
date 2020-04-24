@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lovcalculate"
+    tools:context=".home">
+
+    <RelativeLayout
+        android:id="@+id/datalayout"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:background="@drawable/bottompng"/>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:textSize="28sp"
+                    android:textColor="#fff"
+                    android:gravity="center"
+                    android:fontFamily="@font/futura_bold"
+                    android:text="@string/calculatelove"/>
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/malevector" />
+
+                <EditText
+                    android:id="@+id/boyname"
+                    android:layout_width="300dp"
+                    android:layout_height="45dp"
+                    android:paddingTop="3dp"
+                    android:singleLine="true"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:textColor="@color/fontcolor"
+                    android:fontFamily="@font/futura_bold"
+                    android:textSize="20sp"
+                    android:hint="ENTER BOY NAME"
+                    android:textColorHint="@color/fontcolorhint"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"/>
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/femalevector" />
+
+                <EditText
+                    android:id="@+id/girlname"
+                    android:layout_width="300dp"
+                    android:layout_height="45dp"
+                    android:paddingTop="3dp"
+                    android:background="#FFFFFF"
+                    android:gravity="center"
+                    android:textColor="@color/fontcolor"
+                    android:singleLine="true"
+                    android:fontFamily="@font/futura_bold"
+                    android:textSize="20sp"
+                    android:hint="ENTER GIRL NAME"
+                    android:textColorHint="@color/fontcolorhint"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center"/>
+
+                <Button
+                    android:id="@+id/submitbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Calculate"
+                    android:onClick="Submitbt"
+                    android:textSize="28sp"
+                    android:padding="5dp"
+                    android:fontFamily="@font/futura_bold"
+                    android:textColor="#fff"
+                    android:background="#010B3A"
+                    android:layout_marginTop="30dp"/>
+
+            </LinearLayout>
+
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/banner_ads">
+            </com.google.android.gms.ads.AdView>
+
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/resultlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:background="@drawable/bottompng"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/try_again"
+                    android:onClick="Back"
+                    android:fontFamily="@font/futura_bold"
+                    android:textColor="@color/fontcolor"
+                    android:textSize="18dp"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginBottom="130dp"
+                    android:layout_marginRight="10dp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:textSize="24sp"
+                android:textColor="#fff"
+                android:gravity="center"
+                android:fontFamily="@font/futura_bold"
+                android:text="@string/yourlovematch"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_marginTop="70dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/malevector"/>
+
+                    <TextView
+                        android:id="@+id/boynametext"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="#fff"
+                        android:fontFamily="@font/futura_bold"
+                        android:gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:textSize="20sp"
+                        android:textColor="@color/fontcolor"
+                        android:text="AVINASH KUMAR"/>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="22dp"
+                    android:layout_marginEnd="22dp"
+                    android:layout_marginBottom="25dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/heart"/>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="125dp"
+                        android:layout_height="125dp"
+                        android:background="@drawable/femalevector"/>
+
+                    <TextView
+                        android:id="@+id/girlnametext"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:fontFamily="@font/futura_bold"
+                        android:gravity="center"
+                        android:background="#fff"
+                        android:layout_marginTop="8dp"
+                        android:textSize="20sp"
+                        android:textColor="@color/fontcolor"
+                        android:text="AVINASH KUMAR"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/pb"
+                android:visibility="visible"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="40dp"/>
+
+            <TextView
+                android:id="@+id/results"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/futura_bold"
+                android:paddingHorizontal="4dp"
+                android:text="70%"
+                android:textColor=" #fff"
+                android:textSize="76sp"
+                android:visibility="gone" />
+
+
+
+        </LinearLayout>
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ads">
+        </com.google.android.gms.ads.AdView>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/setplacement"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="110dp"
+                android:background="@drawable/bottompng"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+
+
+            <ProgressBar
+                android:visibility="invisible"
+                android:id="@+id/pb2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
